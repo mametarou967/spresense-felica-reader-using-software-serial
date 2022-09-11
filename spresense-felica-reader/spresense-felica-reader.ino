@@ -1,4 +1,4 @@
-#include "RCS620S_ESP32.h"
+#include "RCS620S.h"
 #include <SoftwareSerial.h>
 
 SoftwareSerial mySerial(22, 23);    // RX,TXの割り当て

@@ -6,7 +6,7 @@
 
 #include "Arduino.h"
 
-#include "RCS620S_ESP32.h"
+#include "RCS620S.h"
 
 /* --------------------------------
  * Constant
@@ -202,10 +202,10 @@ bool RCS620S::readWithEncryption(
     
     buf[0] = 0x06;
     memcpy(buf + 1, this->idm, 8);
-    buf[9] = 1; // ƒT[ƒrƒX‚Í1‚Â
+    buf[9] = 1; // ï¿½Tï¿½[ï¿½rï¿½Xï¿½ï¿½1ï¿½ï¿½
     buf[10] = (uint8_t)((sid >> 0u) & 0xffu);
     buf[11] = (uint8_t)((sid >> 8u) & 0xffu);
-    buf[12] = 1; // ƒuƒƒbƒN‚Í1‚Â
+    buf[12] = 1; // ï¿½uï¿½ï¿½ï¿½bï¿½Nï¿½ï¿½1ï¿½ï¿½
     buf[13] = 0x80U;
     buf[14] = bid;
     
